@@ -6,7 +6,8 @@ import {
   Inter_700Bold,
   Inter_900Black,
 } from "@expo-google-fonts/inter";
-
+import { Home } from "./src/screens/Home";
+import { Loading } from "./src/components/Loading";
 import { Background } from "./src/components/background";
 
 export default function App() {
@@ -23,7 +24,8 @@ export default function App() {
         barStyle="light-content"
         backgroundColor="transparent"
         translucent
-      ></StatusBar>
+      />
+      {fontsLoaded ? <Home/> : <Loading/>}
     </Background>
   );
 }
